@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tui</title>
+    <link rel="stylesheet" href="./Tui_files/style.css">
+</head>
+<body>
+    <h1 style="background-color: rgb(249, 99, 99);">boekingsformulier</h1>
+
+    <form action="http://127.0.0.1:5500/index.html"></form>
+
+    <label for="firstname">first name:</label>
+    <input type="text" name="firstname">
+    <br>
+    <br>
+    <label for="surname">Last name:</label>
+    <input type="text" name="surname">
+    <br>
+    <br>
+    <label for="gender">Gender:</label>
+    <input type="radio" name="gender" value="Man" checked=""> Man
+    <input type="radio" name="gender" value="Woman"> Woman
+    <br>
+    <br>
+    <p>Adress :</p>
+    <textarea name="adress" id=""></textarea>
+    <br>
+    <br>
+    <label for="BSN-number">BSN-number:</label>
+    <input type="number" name="BSN-number" max="9">
+    <br>
+    <br>
+    <label for="country">countries :</label>
+    <select name="country" id="country">
+        <option value="select">Select country</option>
+        <option value="spain">Spain</option>
+        <option value="france">France</option>
+        <option value="japan">Japan</option>
+        <option value="sweden">Sweden</option>
+    </select>
+    <br>
+    <br>
+    <label for="datemin">Date of leave:</label>
+    <input type="date" id="datemin" name="datemin" min="2024-09-22">
+    <br>
+    <br>
+    <label for="datemin">Date of return:</label>
+    <input type="date" id="datemin" name="datemin" min="2024-09-23">
+    <br>
+    <br>
+    <label for="Amount of people">Amount of people:</label>
+    <input type="number" name="amount of people" min="1" max="4">
+    <br>
+    <br>
+    <input type="button" value="Book now">
+    <br>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <br>
+    <br>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
